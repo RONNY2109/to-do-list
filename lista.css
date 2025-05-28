@@ -1,0 +1,135 @@
+/* Modo claro y oscuro */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: 0.3s;
+}
+
+/* Variables */
+:root {
+    --bg-color: #f4f4f4;
+    --text-color: #000;
+    --container-bg: white;
+    --button-bg: #4CAF50;
+    --delete-bg: #d9534f;
+    --edit-bg: #ffa500;
+}
+
+/* Modo oscuro solo con CSS */
+body.dark-mode {
+    --bg-color: #222;
+    --text-color: #fff;
+    --container-bg: #333;
+    --button-bg: #6ECB63;
+    --delete-bg: #f05454;
+    --edit-bg: #ffbb33;
+}
+
+/* Contenedor principal */
+.todo-container {
+    background: var(--container-bg);
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Input y botón */
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Mensaje de error cuando el input está vacío */
+.error-message {
+    color: red;
+    font-size: 12px;
+    opacity: 0; /* Oculto por defecto */
+    transition: 0.3s;
+}
+
+/* Mostrar el mensaje de error si el input está vacío */
+input:placeholder-shown + .error-message {
+    opacity: 1; /* Se hace visible */
+}
+
+/* Botones */
+button {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.add-btn {
+    background-color: var(--button-bg);
+    color: white;
+}
+
+/* Lista de tareas */
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 5px 0;
+    background: var(--container-bg);
+    border-radius: 5px;
+    word-wrap: break-word;
+}
+
+/* Estilo cuando la tarea está completada */
+.completed span {
+    text-decoration: line-through;
+    color: gray;
+}
+
+/* Botones de editar y eliminar */
+.edit-btn {
+    background-color: var(--edit-bg);
+    color: white;
+}
+
+.delete-btn {
+    background-color: var(--delete-bg);
+    color: white;
+}
+
+/* Hover para los botones */
+button:hover {
+    opacity: 0.8;
+}
+
+/* Alternar tema oscuro en CSS */
+.theme-toggle {
+    background-color: var(--button-bg);
+    color: white;
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+    .todo-container {
+        width: 95%;
+    }
+}

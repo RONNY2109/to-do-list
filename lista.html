@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="lista.css">
+</head>
+<body>
+   <div class="todo-container">
+        <h1>TODO APP</h1>
+
+        <div class="input-container">
+            <input type="text" placeholder="Create some task...">
+            <button class="add-btn">+</button>
+        </div>
+        <p class="error-message">A task must be provided.</p>
+
+        <ul class="task-list">
+            <li class="task-item">
+                <span>Ejemplo de tarea pendiente</span>
+                <button class="edit-btn">✎</button>
+                <button class="delete-btn">✖</button>
+            </li>
+            <li class="task-item completed">
+                <span>Ejemplo de tarea completada</span>
+                <button class="edit-btn">✎</button>
+                <button class="delete-btn">✖</button>
+            </li>
+        </ul>
+
+        <div class="task-count">
+            <p>Total: 2</p>
+            <p>Completed: 1</p>
+            <p>Incompleted: 1</p>
+        </div>
+
+        <button class="theme-toggle">🌙 Cambiar Tema</button>
+    </div>
+</body>
+</html>
