@@ -18,17 +18,10 @@ body {
     --button-bg: #4CAF50;
     --delete-bg: #d9534f;
     --edit-bg: #ffa500;
+    --check-bg: #4CAF50;
 }
 
-/* Modo oscuro solo con CSS */
-body.dark-mode {
-    --bg-color: #222;
-    --text-color: #fff;
-    --container-bg: #333;
-    --button-bg: #6ECB63;
-    --delete-bg: #f05454;
-    --edit-bg: #ffbb33;
-}
+
 
 /* Contenedor principal */
 .todo-container {
@@ -59,7 +52,7 @@ input {
 .error-message {
     color: red;
     font-size: 12px;
-    opacity: 0; /* Oculto por defecto */
+     /* Oculto por defecto */
     transition: 0.3s;
 }
 
@@ -113,6 +106,10 @@ button {
 
 .delete-btn {
     background-color: var(--delete-bg);
+    color: white;
+}
+.check-btn {
+    background-color: var(--check-bg);
     color: white;
 }
 
